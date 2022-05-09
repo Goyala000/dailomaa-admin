@@ -1,5 +1,5 @@
 // material-ui
-import { useTheme } from '@mui/material/styles';
+// import { useTheme } from '@mui/material/styles';
 
 /**
  * if you want to use image instead of <svg> uncomment following.
@@ -14,7 +14,7 @@ import logo from 'assets/images/dailomaaLogo.png';
 // ==============================|| LOGO SVG ||============================== //
 
 const Logo = () => {
-    const theme = useTheme();
+    // const theme = useTheme();
 
     return (
         <img src={logo} alt="Berry" width="100" />
