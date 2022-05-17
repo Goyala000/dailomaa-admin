@@ -82,7 +82,11 @@ const Breadcrumbs = ({ card, divider, icon, icons, maxItems, navigation, rightAl
     if (main && main.type === 'collapse') {
         CollapseIcon = main.icon ? main.icon : AccountTreeTwoToneIcon;
         mainContent = (
-            <Typography component={Link} to="#" variant="subtitle1" sx={linkSX}>
+            // <Typography component={Link} to="" variant="subtitle1" sx={linkSX}>
+            //     {icons && <CollapseIcon style={iconStyle} />}
+            //     {main.title}
+            // </Typography>
+            <Typography variant="subtitle1" sx={linkSX}>
                 {icons && <CollapseIcon style={iconStyle} />}
                 {main.title}
             </Typography>

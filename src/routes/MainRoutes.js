@@ -28,6 +28,13 @@ const ReturnedOrders = Loadable(lazy(() => import('views/order-management/Return
 const FailedOrders = Loadable(lazy(() => import('views/order-management/FailedOrders')));
 const CanceledOrders = Loadable(lazy(() => import('views/order-management/CanceledOrders')));
 
+// Product Management routing
+const AddNewBrandView = Loadable(lazy(() => import('views/product-management/brands/add')));
+const BrandListView = Loadable(lazy(() => import('views/product-management/brands')));
+const CategoryView = Loadable(lazy(() => import('views/product-management/categories')));
+const SubCategoryView = Loadable(lazy(() => import('views/product-management/categories/subCategory')));
+const SubSubCategoryView = Loadable(lazy(() => import('views/product-management/categories/subSubCategory')));
+
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -101,6 +108,26 @@ const MainRoutes = {
         {
             path: '/orders/list/canceled',
             element: <CanceledOrders />
+        },
+        {
+            path: '/brand/add-new',
+            element: <AddNewBrandView />
+        },
+        {
+            path: '/brand/list',
+            element: <BrandListView />
+        },
+        {
+            path: '/category/view',
+            element: <CategoryView />
+        },
+        {
+            path: '/sub-category/view',
+            element: <SubCategoryView />
+        },
+        {
+            path: '/sub-sub-category/view',
+            element: <SubSubCategoryView />
         }
     ]
 };

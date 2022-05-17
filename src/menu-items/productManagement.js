@@ -15,6 +15,57 @@ const productManagement = {
     type: 'group',
     children: [
         {
+            id: 'brands',
+            title: 'Brands',
+            type: 'collapse',
+            icon: icons.IconBrandApple,
+            children: [
+                {
+                    id: 'add-new',
+                    title: 'Add New',
+                    type: 'item',
+                    url: '/brand/add-new',
+                    breadcrumbs: true
+                },
+                {
+                    id: 'list',
+                    title: 'Brand List',
+                    type: 'item',
+                    url: '/brand/list',
+                    breadcrumbs: true
+                }
+            ]
+        },
+        {
+            id: 'Categories',
+            title: 'Categories',
+            type: 'collapse',
+            icon: icons.IconLayoutList,
+            children: [
+                {
+                    id: 'category',
+                    title: 'Category',
+                    type: 'item',
+                    url: '/category/view',
+                    breadcrumbs: true
+                },
+                {
+                    id: 'sub-category',
+                    title: 'Sub Category',
+                    type: 'item',
+                    url: '/sub-category/view',
+                    breadcrumbs: true
+                },
+                {
+                    id: 'sub-sub-category',
+                    title: 'Sub Sub Category',
+                    type: 'item',
+                    url: '/sub-sub-category/view',
+                    breadcrumbs: true
+                }
+            ]
+        },
+        {
             id: 'inhouse-products',
             title: 'InHouse Products',
             type: 'collapse',
@@ -32,57 +83,6 @@ const productManagement = {
                     title: 'Stock limit products',
                     type: 'item',
                     url: '/product/stock-limit-list/in_house',
-                    breadcrumbs: false
-                }
-            ]
-        },
-        {
-            id: 'brands',
-            title: 'Brands',
-            type: 'collapse',
-            icon: icons.IconBrandApple,
-            children: [
-                {
-                    id: 'add-new',
-                    title: 'Add New',
-                    type: 'item',
-                    url: '/brand/add-new',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'list',
-                    title: 'List',
-                    type: 'item',
-                    url: '/brand/list',
-                    breadcrumbs: false
-                }
-            ]
-        },
-        {
-            id: 'Categories',
-            title: 'Categories',
-            type: 'collapse',
-            icon: icons.IconLayoutList,
-            children: [
-                {
-                    id: 'category',
-                    title: 'Category',
-                    type: 'item',
-                    url: '/category/view',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'sub-category',
-                    title: 'Sub category',
-                    type: 'item',
-                    url: '/sub-category/view',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'sub-sub-category',
-                    title: 'Sub sub category',
-                    type: 'item',
-                    url: '/sub-sub-category/view',
                     breadcrumbs: false
                 }
             ]

@@ -1,7 +1,5 @@
-import PropTypes from 'prop-types';
-
 // material-ui
-import { Box, Card, Grid, Chip, CardHeader, Divider, Switch, FormGroup, FormControlLabel } from '@mui/material';
+import { Box, Card, Grid, Chip, Divider, Switch, FormGroup, FormControlLabel } from '@mui/material';
 
 import { useTheme } from '@mui/material/styles';
 
