@@ -35,6 +35,10 @@ const CategoryView = Loadable(lazy(() => import('views/product-management/catego
 const SubCategoryView = Loadable(lazy(() => import('views/product-management/categories/subCategory')));
 const SubSubCategoryView = Loadable(lazy(() => import('views/product-management/categories/subSubCategory')));
 
+// In House Products routing
+const InHouseProductListView = Loadable(lazy(() => import('views/product-management/in-house-products')));
+const StockLimitProductsView = Loadable(lazy(() => import('views/product-management/in-house-products/StockLimitProducts')));
+
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -128,6 +132,14 @@ const MainRoutes = {
         {
             path: '/sub-sub-category/view',
             element: <SubSubCategoryView />
+        },
+        {
+            path: '/product/list/in_house',
+            element: <InHouseProductListView />
+        },
+        {
+            path: '/product/stock-limit-list/in_house',
+            element: <StockLimitProductsView />
         }
     ]
 };

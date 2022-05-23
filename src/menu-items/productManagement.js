@@ -76,14 +76,14 @@ const productManagement = {
                     title: 'Products',
                     type: 'item',
                     url: '/product/list/in_house',
-                    breadcrumbs: false
+                    breadcrumbs: true
                 },
                 {
                     id: 'stock-limit-products',
                     title: 'Stock limit products',
                     type: 'item',
                     url: '/product/stock-limit-list/in_house',
-                    breadcrumbs: false
+                    breadcrumbs: true
                 }
             ]
         },
