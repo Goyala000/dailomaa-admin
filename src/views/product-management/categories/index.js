@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import { Box } from '@mui/system';
 import MainCard from 'ui-component/cards/MainCard';
 
@@ -37,6 +37,9 @@ export default function CategoryView() {
                         labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
                     />
                 </div>
+            </Box>
+            <Box sx={{ marginBottom: '40px' }}>
+                <Button variant="contained">Submit</Button>
             </Box>
             <SubCard title="Category Table">
                 <TableComponent />
