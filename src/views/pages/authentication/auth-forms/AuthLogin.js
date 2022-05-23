@@ -60,7 +60,7 @@ const FirebaseLogin = ({ ...others }) => {
     return (
         <>
             <Grid container direction="column" justifyContent="center" spacing={2}>
-                <Grid item xs={12}>
+                {/* <Grid item xs={12}>
                     <AnimateButton>
                         <Button
                             disableElevation
@@ -80,8 +80,8 @@ const FirebaseLogin = ({ ...others }) => {
                             Sign in with Google
                         </Button>
                     </AnimateButton>
-                </Grid>
-                <Grid item xs={12}>
+                </Grid> */}
+                {/* <Grid item xs={12}>
                     <Box
                         sx={{
                             alignItems: 'center',
@@ -110,17 +110,17 @@ const FirebaseLogin = ({ ...others }) => {
 
                         <Divider sx={{ flexGrow: 1 }} orientation="horizontal" />
                     </Box>
-                </Grid>
-                <Grid item xs={12} container alignItems="center" justifyContent="center">
+                </Grid> */}
+                {/* <Grid item xs={12} container alignItems="center" justifyContent="center">
                     <Box sx={{ mb: 2 }}>
                         <Typography variant="subtitle1">Sign in with Email address</Typography>
                     </Box>
-                </Grid>
+                </Grid> */}
             </Grid>
 
             <Formik
                 initialValues={{
-                    email: 'info@codedthemes.com',
+                    email: 'admin@admin.com',
                     password: '123456',
                     submit: null
                 }}
