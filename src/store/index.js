@@ -1,9 +1,14 @@
-import { createStore } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
+
 import reducer from './reducer';
 
-// ==============================|| REDUX - MAIN STORE ||============================== //
+const preloadedState = {};
 
-const store = createStore(reducer);
-const persister = 'Free';
+const store = configureStore({
+    middleware: [thunk],
+    reducer,
+    preloadedState
+});
 
-export { store, persister };
+export { store };

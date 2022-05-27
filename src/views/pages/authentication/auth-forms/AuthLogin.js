@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -34,6 +34,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 import Google from 'assets/images/icons/social-google.svg';
+import { login } from 'store/actions/userAction';
 
 // ============================|| FIREBASE - LOGIN ||============================ //
 
@@ -56,6 +57,8 @@ const FirebaseLogin = ({ ...others }) => {
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
+
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -133,6 +136,8 @@ const FirebaseLogin = ({ ...others }) => {
                         if (scriptedRef.current) {
                             setStatus({ success: true });
                             setSubmitting(false);
+                            console.log(values);
+                            dispatch(login(values.email, values.password));
                         }
                     } catch (err) {
                         console.error(err);
