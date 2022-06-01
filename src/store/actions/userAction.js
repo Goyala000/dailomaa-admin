@@ -9,7 +9,7 @@ export const login = (email, password) => async (dispatch) => {
             type: actionTypes.LOGIN_REQUEST
         });
 
-        const { data } = await axiosInstance.post('/api/auth/token/', { email, password });
+        const { data } = await axiosInstance.post('/api/auth/admin/', { email, password });
 
         dispatch({
             type: actionTypes.LOGIN_SUCCESS,

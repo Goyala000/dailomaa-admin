@@ -6,8 +6,9 @@ export const initialState = {
     refresh_token: localStorage.getItem('refresh_token'),
     isAuthenticated: localStorage.getItem('access_token') ? true : false,
     isLoading: false,
-    isAdmin: localStorage.getItem('access_token') ? true : false,
-    isSeller: localStorage.getItem('access_token') ? true : false
+    isSuperAdmin: null,
+    isSeller: null,
+    userInfo: {}
 };
 
 // ==============================|| CUSTOMIZATION REDUCER ||============================== //
@@ -25,17 +26,28 @@ const userReducer = (state = initialState, action) => {
         case actionTypes.LOGIN_SUCCESS:
             localStorage.setItem('access_token', action.payload.access);
             localStorage.setItem('refresh_token', action.payload.refresh);
+            console.log(action.payload);
             return {
                 access_token: action.payload.access,
                 refresh_token: action.payload.refresh,
                 isLoading: false,
-                isAuthenticated: true
+                isAuthenticated: true,
+                isSuperAdmin: action.payload.is_superadmin,
+                isSeller: action.payload.is_seller,
+                userInfo: {
+                    firstName: action.payload.firstname,
+                    lastName: action.payload.lastname,
+                    mobile: action.payload.mobile
+                }
             };
+
         case actionTypes.LOGIN_FAIL:
             return {
                 isLoading: false,
                 isAuthenticated: false,
-                error: action.payload
+                isSuperAdmin: null,
+                isSeller: null,
+                userInfo: {}
             };
         case actionTypes.LOG_OUT:
             return {};
