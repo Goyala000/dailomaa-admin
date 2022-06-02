@@ -26,7 +26,6 @@ const userReducer = (state = initialState, action) => {
         case actionTypes.LOGIN_SUCCESS:
             localStorage.setItem('access_token', action.payload.access);
             localStorage.setItem('refresh_token', action.payload.refresh);
-            console.log(action.payload);
             return {
                 access_token: action.payload.access,
                 refresh_token: action.payload.refresh,
@@ -47,7 +46,8 @@ const userReducer = (state = initialState, action) => {
                 isAuthenticated: false,
                 isSuperAdmin: null,
                 isSeller: null,
-                userInfo: {}
+                userInfo: {},
+                error: action.payload
             };
         case actionTypes.LOG_OUT:
             return {};

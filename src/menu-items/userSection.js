@@ -47,7 +47,8 @@ const userSection = {
             type: 'item',
             url: '/customer/list',
             icon: icons.IconUsers,
-            breadcrumbs: false
+            breadcrumbs: false,
+            visible: true
         }
     ]
 };

@@ -20,7 +20,7 @@ export const login = (email, password) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: actionTypes.LOGIN_FAIL,
-            payload: error.response && error.response.data.message ? error.response.data.message : error.message
+            payload: error.response && error.response.data.detail ? error.response.data.detail : error.message
         });
     }
 };

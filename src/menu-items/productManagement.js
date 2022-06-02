@@ -1,6 +1,9 @@
 // assets
 import { IconHome, IconBrandApple, IconLayoutList, IconBrandProducthunt } from '@tabler/icons';
 
+import { useSelector, useDispatch } from 'react-redux';
+import Loader from 'ui-component/Loader';
+
 // constant
 const icons = {
     IconHome,
@@ -115,6 +118,42 @@ const productManagement = {
                     breadcrumbs: false
                 }
             ]
+        },
+        {
+            id: 'products',
+            title: 'Products',
+            type: 'collapse',
+            icon: icons.IconBrandProducthunt,
+            children: [
+                {
+                    id: 'products',
+                    title: 'Products',
+                    type: 'item',
+                    url: '/seller/product/list',
+                    breadcrumbs: false
+                },
+                {
+                    id: 'stock-limit-products',
+                    title: 'Stock Limit Products',
+                    type: 'item',
+                    url: '/seller/product/stock_limit/in_house',
+                    breadcrumbs: false
+                },
+                {
+                    id: 'denied-products',
+                    title: 'Denied Products',
+                    type: 'item',
+                    url: '/product/list/seller',
+                    breadcrumbs: false
+                }
+            ]
+        },
+
+        {
+            id: 'test',
+            title: 'Test',
+            type: 'item',
+            icon: icons.IconBrandProducthunt
         }
     ]
 };

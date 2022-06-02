@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
+import { Navigate } from 'react-router-dom';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -34,6 +36,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 import { login } from 'store/actions/userAction';
+import Loader from 'ui-component/Loader';
 
 const AdminLogin = ({ ...others }) => {
     const theme = useTheme();
@@ -43,6 +46,7 @@ const AdminLogin = ({ ...others }) => {
     const [checked, setChecked] = useState(true);
 
     const [showPassword, setShowPassword] = useState(false);
+    const [errMsg, setErrMsg] = useState('');
     const handleClickShowPassword = () => {
         setShowPassword(!showPassword);
     };
@@ -53,8 +57,18 @@ const AdminLogin = ({ ...others }) => {
 
     const dispatch = useDispatch();
 
+    const user = useSelector((state) => state.user);
+    const { isLoading, isAuthenticated, isSuperAdmin, isSeller, userInfo, error } = user;
+
+    useEffect(() => {
+        if (isLoading) {
+            <Loader />;
+        }
+    }, [isLoading, isAuthenticated, error]);
     return (
         <>
+            {isAuthenticated && userInfo && <Navigate to="/" replace={true} />}
+            <p>{error}</p>
             <Grid container direction="column" justifyContent="center" spacing={2}>
                 {/* <Grid item xs={12}>
                     <AnimateButton>
@@ -132,13 +146,12 @@ const AdminLogin = ({ ...others }) => {
                             console.log(values);
                             dispatch(login(values.email, values.password));
                         }
+                        setErrMsg(error);
                     } catch (err) {
-                        console.error(err);
                         if (scriptedRef.current) {
                             setStatus({ success: false });
                             setErrors({ submit: err.message });
                             setSubmitting(false);
-                            console.log('l vayo');
                         }
                     }
                 }}
