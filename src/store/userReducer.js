@@ -6,8 +6,8 @@ export const initialState = {
     refresh_token: localStorage.getItem('refresh_token'),
     isAuthenticated: localStorage.getItem('access_token') ? true : false,
     isLoading: false,
-    isSuperAdmin: null,
-    isSeller: null,
+    isSuperAdmin: false,
+    isSeller: true,
     userInfo: {}
 };
 

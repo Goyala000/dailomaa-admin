@@ -22,6 +22,7 @@ const productManagement = {
             title: 'Brands',
             type: 'collapse',
             icon: icons.IconBrandApple,
+            visible: 'isSuperAdmin',
             children: [
                 {
                     id: 'add-new',
@@ -44,6 +45,8 @@ const productManagement = {
             title: 'Categories',
             type: 'collapse',
             icon: icons.IconLayoutList,
+            visible: 'isSuperAdmin',
+
             children: [
                 {
                     id: 'category',
@@ -73,6 +76,8 @@ const productManagement = {
             title: 'InHouse Products',
             type: 'collapse',
             icon: icons.IconHome,
+            visible: 'isSuperAdmin',
+
             children: [
                 {
                     id: 'products',
@@ -95,6 +100,8 @@ const productManagement = {
             title: 'Seller Products',
             type: 'collapse',
             icon: icons.IconBrandProducthunt,
+            visible: 'isSuperAdmin',
+
             children: [
                 {
                     id: 'new-products',
@@ -124,6 +131,8 @@ const productManagement = {
             title: 'Products',
             type: 'collapse',
             icon: icons.IconBrandProducthunt,
+            visible: 'isSeller',
+
             children: [
                 {
                     id: 'products',
@@ -148,12 +157,12 @@ const productManagement = {
                 }
             ]
         },
-
         {
             id: 'test',
             title: 'Test',
             type: 'item',
-            icon: icons.IconBrandProducthunt
+            icon: icons.IconBrandProducthunt,
+            visible: 'isSeller'
         }
     ]
 };

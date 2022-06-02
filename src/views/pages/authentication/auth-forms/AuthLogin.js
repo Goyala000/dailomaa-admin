@@ -67,7 +67,7 @@ const AdminLogin = ({ ...others }) => {
     }, [isLoading, isAuthenticated, error]);
     return (
         <>
-            {isAuthenticated && userInfo && <Navigate to="/" replace={true} />}
+            {isSeller && <Navigate to="/" replace={true} />}
             <p>{error}</p>
             <Grid container direction="column" justifyContent="center" spacing={2}>
                 {/* <Grid item xs={12}>
