@@ -50,6 +50,25 @@ const SellerReturnedOrders = Loadable(lazy(() => import('views/seller-order-mana
 const SellerFailedOrders = Loadable(lazy(() => import('views/seller-order-management/SellerFailedOrders')));
 const SellerCanceledOrders = Loadable(lazy(() => import('views/seller-order-management/SellerCanceledOrders')));
 
+// Seller Product Management Routing
+const SellerProductsView = Loadable(lazy(() => import('views/product-management/seller/products')));
+const SellerStockLimitProduct = Loadable(lazy(() => import('views/product-management/seller/products/SellerStockLimitProduct')));
+const SellerProductReviewView = Loadable(lazy(() => import('views/product-management/seller/productReviewView')));
+const SellerPendingRefund = Loadable(lazy(() => import('views/product-management/seller/seller-refund-request-list/SellerPendingRefund')));
+const SellerApprovedRefund = Loadable(
+    lazy(() => import('views/product-management/seller/seller-refund-request-list/SellerApprovedRefund'))
+);
+const SellerRefundedRefund = Loadable(
+    lazy(() => import('views/product-management/seller/seller-refund-request-list/SellerRefundedRefund'))
+);
+
+const SellerRejectedRefund = Loadable(
+    lazy(() => import('views/product-management/seller/seller-refund-request-list/SellerRejectedRefund'))
+);
+const SellerMessageView = Loadable(lazy(() => import('views/product-management/seller/MessageView')));
+const SellerShopView = Loadable(lazy(() => import('views/product-management/seller/SellerShopView')));
+const SellerBankView = Loadable(lazy(() => import('views/product-management/seller/SellerBankView')));
+
 // Seller Products routing
 const SellerProductListView = Loadable(lazy(() => import('views/product-management/seller-products')));
 const ApprovedProductListView = Loadable(lazy(() => import('views/product-management/seller-products/ApprovedProduct')));
@@ -196,16 +215,44 @@ const MainRoutes = {
             element: <SellerCanceledOrders />
         },
         {
-            path: '/product/list/seller',
-            element: <SellerProductListView />
+            path: '/seller/product/list',
+            element: <SellerProductsView />
         },
         {
-            path: '/product/list/seller',
-            element: <ApprovedProductListView />
+            path: '/seller/product/stock-limit-list/in-house',
+            element: <SellerStockLimitProduct />
         },
         {
-            path: '/product/list/seller',
-            element: <DeniedProductListView />
+            path: '/seller/reviews/list',
+            element: <SellerProductReviewView />
+        },
+        {
+            path: '/seller/refund/list/pending',
+            element: <SellerPendingRefund />
+        },
+        {
+            path: '/seller/refund/list/approved',
+            element: <SellerApprovedRefund />
+        },
+        {
+            path: '/seller/refund/list/refunded',
+            element: <SellerRefundedRefund />
+        },
+        {
+            path: '/seller/refund/list/rejected',
+            element: <SellerRejectedRefund />
+        },
+        {
+            path: '/seller/messages/chat',
+            element: <SellerMessageView />
+        },
+        {
+            path: '/seller/profile/view',
+            element: <SellerBankView />
+        },
+        {
+            path: '/seller/shop/view',
+            element: <SellerShopView />
         }
     ]
 };

@@ -158,14 +158,7 @@ const productManagement = {
                     id: 'stock-limit-products',
                     title: 'Stock Limit Products',
                     type: 'item',
-                    url: '/seller/product/stock_limit/in_house',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'denied-products',
-                    title: 'Denied Products',
-                    type: 'item',
-                    url: '/product/list/seller',
+                    url: '/seller/product/stock-limit-list/in-house',
                     breadcrumbs: false
                 }
             ]
@@ -174,6 +167,7 @@ const productManagement = {
             id: 'product-reviews',
             title: 'Product Reviews',
             type: 'item',
+            url: '/seller/reviews/list',
             icon: icons.IconStar,
             visible: 'isSeller'
         },
@@ -188,28 +182,28 @@ const productManagement = {
                     id: 'pending',
                     title: 'Pending',
                     type: 'item',
-                    url: '/seller/product/list',
+                    url: '/seller/refund/list/pending',
                     breadcrumbs: false
                 },
                 {
                     id: 'approved',
                     title: 'Approved',
                     type: 'item',
-                    url: '/seller/product/stock_limit/in_house',
+                    url: '/seller/refund/list/approved',
                     breadcrumbs: false
                 },
                 {
                     id: 'refunded',
                     title: 'Refunded',
                     type: 'item',
-                    url: '/product/list/seller',
+                    url: '/seller/refund/list/refunded',
                     breadcrumbs: false
                 },
                 {
                     id: 'rejected',
                     title: 'Rejected',
                     type: 'item',
-                    url: '/product/list/seller',
+                    url: '/seller/refund/list/rejected',
                     breadcrumbs: false
                 }
             ]
@@ -218,6 +212,7 @@ const productManagement = {
             id: 'messages',
             title: 'Messages',
             type: 'item',
+            url: '/seller/messages/chat',
             icon: icons.IconMail,
             visible: 'isSeller'
         },
@@ -225,6 +220,7 @@ const productManagement = {
             id: 'my-bank-info',
             title: 'My Bank Info',
             type: 'item',
+            url: '/seller/profile/view',
             icon: icons.IconBuildingBank,
             visible: 'isSeller'
         },
@@ -232,6 +228,7 @@ const productManagement = {
             id: 'my-shop',
             title: 'My Shop',
             type: 'item',
+            url: '/seller/shop/view',
             icon: icons.IconHome,
             visible: 'isSeller'
         }
