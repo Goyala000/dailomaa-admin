@@ -39,6 +39,17 @@ const SubSubCategoryView = Loadable(lazy(() => import('views/product-management/
 const InHouseProductListView = Loadable(lazy(() => import('views/product-management/in-house-products')));
 const StockLimitProductsView = Loadable(lazy(() => import('views/product-management/in-house-products/StockLimitProducts')));
 
+// Seller Orders Routing
+const SellerAllOrders = Loadable(lazy(() => import('views/seller-order-management')));
+const SellerPendingOrders = Loadable(lazy(() => import('views/seller-order-management/SellerPendingOrders')));
+const SellerConfirmedOrders = Loadable(lazy(() => import('views/seller-order-management/SellerConfirmedOrders')));
+const SellerProcessingOrders = Loadable(lazy(() => import('views/seller-order-management/SellerProcessingOrders')));
+const SellerOutForDeliveryOrders = Loadable(lazy(() => import('views/seller-order-management/SellerOutForDeliveryOrders')));
+const SellerDeliveredOrders = Loadable(lazy(() => import('views/seller-order-management/SellerDeliveredOrders')));
+const SellerReturnedOrders = Loadable(lazy(() => import('views/seller-order-management/SellerReturnedOrders')));
+const SellerFailedOrders = Loadable(lazy(() => import('views/seller-order-management/SellerFailedOrders')));
+const SellerCanceledOrders = Loadable(lazy(() => import('views/seller-order-management/SellerCanceledOrders')));
+
 // Seller Products routing
 const SellerProductListView = Loadable(lazy(() => import('views/product-management/seller-products')));
 const ApprovedProductListView = Loadable(lazy(() => import('views/product-management/seller-products/ApprovedProduct')));
@@ -145,6 +156,44 @@ const MainRoutes = {
         {
             path: '/product/stock-limit-list/in_house',
             element: <StockLimitProductsView />
+        },
+
+        // Seller
+        {
+            path: '/seller/orders/list/all',
+            element: <SellerAllOrders />
+        },
+        {
+            path: '/seller/orders/list/pending',
+            element: <SellerPendingOrders />
+        },
+        {
+            path: '/seller/orders/list/confirmed',
+            element: <SellerConfirmedOrders />
+        },
+        {
+            path: '/seller/orders/list/processing',
+            element: <SellerProcessingOrders />
+        },
+        {
+            path: '/seller/orders/list/out_for_delivery',
+            element: <SellerOutForDeliveryOrders />
+        },
+        {
+            path: '/seller/orders/list/delivered',
+            element: <SellerDeliveredOrders />
+        },
+        {
+            path: '/seller/orders/list/returned',
+            element: <SellerReturnedOrders />
+        },
+        {
+            path: '/seller/orders/list/failed',
+            element: <SellerFailedOrders />
+        },
+        {
+            path: '/seller/orders/list/canceled',
+            element: <SellerCanceledOrders />
         },
         {
             path: '/product/list/seller',

@@ -13,6 +13,7 @@ const businessSetting = {
     id: 'business-settings',
     title: 'Business Settings',
     type: 'group',
+    visible: 'isSuperAdmin',
     children: [
         {
             id: 'refund-request-list',

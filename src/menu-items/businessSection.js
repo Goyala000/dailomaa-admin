@@ -1,8 +1,8 @@
 // assets
-import { IconMaximize, IconStar, IconHeart, IconCashBanknote } from '@tabler/icons';
+import { IconMaximize, IconStar, IconHeart, IconCashBanknote, IconSettings, IconReceipt } from '@tabler/icons';
 
 // constant
-const icons = { IconMaximize, IconStar, IconHeart, IconCashBanknote };
+const icons = { IconMaximize, IconStar, IconHeart, IconCashBanknote, IconSettings, IconReceipt };
 
 const businessSection = {
     id: 'business-section',
@@ -15,6 +15,7 @@ const businessSection = {
             type: 'item',
             url: '/stock/product-stock',
             icon: icons.IconMaximize,
+            visible: 'isSuperAdmin',
             breadcrumbs: false
         },
         {
@@ -23,6 +24,7 @@ const businessSection = {
             type: 'item',
             url: '/reviews/list',
             icon: icons.IconStar,
+            visible: 'isSuperAdmin',
             breadcrumbs: false
         },
         {
@@ -31,6 +33,7 @@ const businessSection = {
             type: 'item',
             url: '/stock/product-in-wish-list',
             icon: icons.IconHeart,
+            visible: 'isSuperAdmin',
             breadcrumbs: false
         },
         {
@@ -39,6 +42,7 @@ const businessSection = {
             type: 'item',
             url: '/transaction/list',
             icon: icons.IconCashBanknote,
+            visible: 'isSuperAdmin',
             breadcrumbs: false
         },
         {
@@ -47,6 +51,25 @@ const businessSection = {
             type: 'item',
             url: '/transaction/refund-list',
             icon: icons.IconCashBanknote,
+            visible: 'isSuperAdmin',
+            breadcrumbs: false
+        },
+        {
+            id: 'shipping-method',
+            title: 'Shipping Method',
+            type: 'item',
+            url: '/seller/business-settings/shipping-method/add',
+            icon: icons.IconSettings,
+            visible: 'isSeller',
+            breadcrumbs: false
+        },
+        {
+            id: 'withdraws',
+            title: 'Withdraws',
+            type: 'item',
+            url: '/seller/business-settings/withdraw/list',
+            icon: icons.IconReceipt,
+            visible: 'isSeller',
             breadcrumbs: false
         }
     ]

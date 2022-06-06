@@ -8,6 +8,7 @@ const marketingSection = {
     id: 'marketing-section',
     title: 'Marketing Section',
     type: 'group',
+    visible: 'isSuperAdmin',
     children: [
         {
             id: 'banners',

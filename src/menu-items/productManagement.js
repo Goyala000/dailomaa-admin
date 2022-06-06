@@ -1,5 +1,15 @@
 // assets
-import { IconHome, IconBrandApple, IconLayoutList, IconBrandProducthunt } from '@tabler/icons';
+import {
+    IconHome,
+    IconBrandApple,
+    IconLayoutList,
+    IconBrandProducthunt,
+    IconDiamond,
+    IconStar,
+    IconReceiptRefund,
+    IconMail,
+    IconBuildingBank
+} from '@tabler/icons';
 
 import { useSelector, useDispatch } from 'react-redux';
 import Loader from 'ui-component/Loader';
@@ -9,7 +19,12 @@ const icons = {
     IconHome,
     IconBrandApple,
     IconLayoutList,
-    IconBrandProducthunt
+    IconBrandProducthunt,
+    IconDiamond,
+    IconStar,
+    IconReceiptRefund,
+    IconMail,
+    IconBuildingBank
 };
 
 const productManagement = {
@@ -46,7 +61,6 @@ const productManagement = {
             type: 'collapse',
             icon: icons.IconLayoutList,
             visible: 'isSuperAdmin',
-
             children: [
                 {
                     id: 'category',
@@ -130,9 +144,8 @@ const productManagement = {
             id: 'products',
             title: 'Products',
             type: 'collapse',
-            icon: icons.IconBrandProducthunt,
+            icon: icons.IconDiamond,
             visible: 'isSeller',
-
             children: [
                 {
                     id: 'products',
@@ -158,10 +171,68 @@ const productManagement = {
             ]
         },
         {
-            id: 'test',
-            title: 'Test',
+            id: 'product-reviews',
+            title: 'Product Reviews',
             type: 'item',
-            icon: icons.IconBrandProducthunt,
+            icon: icons.IconStar,
+            visible: 'isSeller'
+        },
+        {
+            id: 'refund-request-list',
+            title: 'Refund Request List',
+            type: 'collapse',
+            icon: icons.IconReceiptRefund,
+            visible: 'isSeller',
+            children: [
+                {
+                    id: 'pending',
+                    title: 'Pending',
+                    type: 'item',
+                    url: '/seller/product/list',
+                    breadcrumbs: false
+                },
+                {
+                    id: 'approved',
+                    title: 'Approved',
+                    type: 'item',
+                    url: '/seller/product/stock_limit/in_house',
+                    breadcrumbs: false
+                },
+                {
+                    id: 'refunded',
+                    title: 'Refunded',
+                    type: 'item',
+                    url: '/product/list/seller',
+                    breadcrumbs: false
+                },
+                {
+                    id: 'rejected',
+                    title: 'Rejected',
+                    type: 'item',
+                    url: '/product/list/seller',
+                    breadcrumbs: false
+                }
+            ]
+        },
+        {
+            id: 'messages',
+            title: 'Messages',
+            type: 'item',
+            icon: icons.IconMail,
+            visible: 'isSeller'
+        },
+        {
+            id: 'my-bank-info',
+            title: 'My Bank Info',
+            type: 'item',
+            icon: icons.IconBuildingBank,
+            visible: 'isSeller'
+        },
+        {
+            id: 'my-shop',
+            title: 'My Shop',
+            type: 'item',
+            icon: icons.IconHome,
             visible: 'isSeller'
         }
     ]

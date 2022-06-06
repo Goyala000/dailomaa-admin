@@ -15,6 +15,7 @@ const utilities = {
     id: 'utilities',
     title: 'Utilities',
     type: 'group',
+    visible: 'isSuperAdmin',
     children: [
         {
             id: 'util-typography',

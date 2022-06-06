@@ -8,6 +8,7 @@ import businessSection from './businessSection';
 import businessSetting from './businessSetting';
 import orderManagement from './orderManagement';
 import userSection from './userSection';
+import DeliveryManManagement from './deliveryManManagement';
 
 // ==============================|| MENU ITEMS ||============================== //
 
@@ -18,10 +19,11 @@ const menuItems = {
         utilities,
         orderManagement,
         productManagement,
-        userSection,
-        businessSetting,
         marketingSection,
         businessSection,
+        userSection,
+        businessSetting,
+        DeliveryManManagement,
         other
     ]
 };

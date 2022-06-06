@@ -11,6 +11,7 @@ const userSection = {
     id: 'user-section',
     title: 'User Section',
     type: 'group',
+    visible: 'isSuperAdmin',
     children: [
         {
             id: 'seller',

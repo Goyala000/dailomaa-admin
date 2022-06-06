@@ -19,7 +19,6 @@ const NavGroup = ({ item }) => {
         switch (menu.type) {
             case 'collapse':
                 if (!menu?.visible || (menu?.visible === 'isSuperAdmin' && isSuperAdmin) || (menu?.visible === 'isSeller' && isSeller)) {
-                    console.log('test');
                     return <NavCollapse key={menu.id} menu={menu} level={1} />;
                 }
                 return;

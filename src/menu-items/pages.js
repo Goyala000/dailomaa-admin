@@ -13,6 +13,7 @@ const pages = {
     title: 'Pages',
     caption: 'Pages Caption',
     type: 'group',
+    visible: 'isSuperAdmin',
     children: [
         {
             id: 'authentication',
