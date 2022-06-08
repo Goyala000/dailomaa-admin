@@ -53,6 +53,7 @@ const SellerCanceledOrders = Loadable(lazy(() => import('views/seller-order-mana
 // Seller Product Management Routing
 const SellerProductsView = Loadable(lazy(() => import('views/product-management/seller/products')));
 const SellerStockLimitProduct = Loadable(lazy(() => import('views/product-management/seller/products/SellerStockLimitProduct')));
+const SellerAddProduct = Loadable(lazy(() => import('views/product-management/seller/products/SellerAddProduct')));
 const SellerProductReviewView = Loadable(lazy(() => import('views/product-management/seller/productReviewView')));
 const SellerPendingRefund = Loadable(lazy(() => import('views/product-management/seller/seller-refund-request-list/SellerPendingRefund')));
 const SellerApprovedRefund = Loadable(
@@ -217,6 +218,10 @@ const MainRoutes = {
         {
             path: '/seller/product/list',
             element: <SellerProductsView />
+        },
+        {
+            path: '/seller/product/add-new',
+            element: <SellerAddProduct />
         },
         {
             path: '/seller/product/stock-limit-list/in-house',
