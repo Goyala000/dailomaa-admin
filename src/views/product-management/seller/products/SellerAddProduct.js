@@ -18,6 +18,7 @@ import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
+import RichTextEditor from 'ui-component/extended/RichTextEditor';
 
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview, FilePondPluginFileValidateType);
 
@@ -51,6 +52,7 @@ export default function SellerAddProduct() {
                 <Grid item>
                     <MainCard title={<BasicBreadcrumbs title1="Dashboard" title2="Product" title3="Add Product" />}>
                         <TextField fullWidth id="outlined-basic" label="Product Name" variant="outlined" margin="normal" />
+                        <RichTextEditor />
                     </MainCard>
                 </Grid>
                 <Grid item>
