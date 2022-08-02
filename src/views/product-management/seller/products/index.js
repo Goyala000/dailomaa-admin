@@ -28,9 +28,10 @@ const ProductTitleComponent = () => {
 };
 
 export default function SellerProductsView() {
+    const tableData = ['SL#', 'PRODUCT NAME', 'PURCHASE PRICE', 'SELLING PRICE', 'VERIFY STATUS', 'ACTIVE STATUS', 'ACTION'];
     return (
         <MainCard title={<ProductTitleComponent />}>
-            <TableComponent />
+            <TableComponent tableHeaders={tableData} />
         </MainCard>
     );
 }

@@ -90,9 +90,10 @@ const ProductTitleComponent = () => {
 };
 
 export default function SellerStockLimitProduct() {
+    const tableData = ['SL#', 'PRODUCT NAME', 'PURCHASE PRICE', 'SELLING PRICE', 'VERIFY STATUS', 'ACTIVE STATUS', 'QUANTITY', 'ORDERS'];
     return (
         <MainCard title={<ProductTitleComponent />}>
-            <TableComponent />
+            <TableComponent tableHeaders={tableData} />
         </MainCard>
     );
 }

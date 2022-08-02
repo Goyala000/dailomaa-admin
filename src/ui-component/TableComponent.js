@@ -28,19 +28,22 @@ const rows = [
     createData('9', 10200, '09 MAY 2022', 'Random Name', 'Unpaid', 'Rs 10200', 'Pending', 'View')
 ];
 
-const TableComponent = () => (
+const TableComponent = ({ tableHeaders }) => (
     <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
                 <TableRow>
-                    <TableCell>SL</TableCell>
+                    {tableHeaders?.map((header) => (
+                        <TableCell align="right">{header}</TableCell>
+                    ))}
+                    {/* <TableCell align="right">SL#</TableCell>
                     <TableCell align="right">ORDER</TableCell>
                     <TableCell align="right">DATE</TableCell>
                     <TableCell align="right">CUSTOMER NAME</TableCell>
                     <TableCell align="right">STATUS</TableCell>
                     <TableCell align="right">TOTAL</TableCell>
                     <TableCell align="right">ORDER STATUS</TableCell>
-                    <TableCell align="right">ACTION</TableCell>
+                    <TableCell align="right">ACTION</TableCell> */}
                 </TableRow>
             </TableHead>
             <TableBody>

@@ -13,6 +13,9 @@ import TableComponent from 'ui-component/TableComponent';
 
 export default function SellerAllOrders() {
     const theme = useTheme();
+
+    const tableData = ['SL#', 'ORDER', 'DATE', 'CUSTOMER NAME', 'PHONE', 'PAYMENT', 'STATUS', 'ACTION'];
+
     return (
         <MainCard
             title={
@@ -48,7 +51,7 @@ export default function SellerAllOrders() {
                                 borderColor: theme.palette.primary.light
                             }}
                         />
-                        <TableComponent />
+                        <TableComponent tableHeaders={tableData} />
                     </SubCard>{' '}
                 </Grid>{' '}
             </Grid>{' '}
